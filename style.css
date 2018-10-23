@@ -1,0 +1,54 @@
+* {
+	border: 0px;
+	padding: 0px;
+	margin: 0px;
+}
+body {
+	background-color: #184c09;
+}
+button {
+	padding: 3px 5px;
+	margin: 5px 0px 5px 5px;
+}
+.homes {
+	display: inline-block;
+}
+.homes div {
+	width: 100px;
+	height: 145px;
+	padding: 4px;
+	border: 1px solid white;
+	background-color: rgba(255,255,255,0.2);
+	display: inline-block;
+	margin: 7px 0px 7px 7px;
+}
+img {
+	width: 100px;
+	/*display: inline-block;*/
+}
+.deckpile {
+	display: inline-block;
+	vertical-align: top;
+	margin: 7px 0px 7px 7px;
+	margin-left: 50px;
+}
+.deckpile div {
+	display: inline-block;
+}
+.emptyspace {
+	width: 100px;
+	height: 145px;
+	padding: 4px;
+	/*border: 1px solid white;*/
+	background-color: rgba(255,255,255,0.2);
+}
+.stacks {
+	margin-top: 30px;
+}
+.stacks div {
+	vertical-align: top;
+	width: 100px;
+	padding: 5px 0px;
+	margin: 10px 0px 0px 10px;
+	display: inline-block;
+}

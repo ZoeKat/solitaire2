@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Solitaire</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript">
+		var deck = []
+		var houses = ["clubs", "diamonds", "hearts", "spades"]
+		$( document ).ready(function() {
+		    console.log( "ready!" );
+		    for(var i = 0; i < 4; i++) {
+		    	for(var j = 1; j < 14; j++) {
+		    		if(j == 1) {
+		    			var card = new Object();
+		    			card.no = "ace";
+		    			card.house = houses[i];
+		    			deck.push(card);
+		    		} else if(j == 11) {
+		    			var card = new Object();
+		    			card.no = "jack";
+		    			card.house = houses[i];
+		    			deck.push(card);
+		    		} else if(j == 12) {
+		    			var card = new Object();
+		    			card.no = "queen";
+		    			card.house = houses[i];
+		    			deck.push(card);
+		    		} else if(j == 13) {
+		    			var card = new Object();
+		    			card.no = "king";
+		    			card.house = houses[i];
+		    			deck.push(card);
+		    		} else {
+		    			var card = new Object();
+		    			card.no = j;
+		    			card.house = houses[i];
+		    			deck.push(card);
+		    		}
+		    	}
+		    }
+		    function shuffleArray(array) {
+			    for (var i = array.length - 1; i > 0; i--) {
+			        var j = Math.floor(Math.random() * (i + 1));
+			        var temp = array[i];
+			        array[i] = array[j];
+			        array[j] = temp;
+			    }
+			}
+			shuffleArray(deck);
+		    console.log(deck);
+
+		});
+	</script>
+</head>
+<body>
+	<div class="top">
+		<button id="restart">Restart</button> <button id="newshuff">Shuffle New</button>
+	</div>
+	<div class="homes">
+		<div id="h1"></div><div id="h2"></div><div id="h3"></div><div id="h4"></div>
+	</div>
+	<div class="deckpile">
+		<div class="emptyspace" id="dp1"></div>
+		<div class="nonempty" id="dp2"><img src="cards/back2.png"></div>
+	</div>
+	<div class="stacks">
+		<div id="s1"></div><div id="s2"></div><div id="s3"></div><div id="s4"></div><div id="s5"></div><div id="s6"></div><div id="s7"></div>
+	</div>
+
+<!-- 	<img src="cards/2_of_spades.png">
+		<img src="cards/back2.png"> -->
+</body>
+</html>
